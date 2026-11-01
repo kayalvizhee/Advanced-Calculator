@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculator">
+    <header class="header">
+      <div class="app-icon">＋<br>×</div>
+      <div>
+        <h1>Advanced <span>Calculator</span></h1>
+        <p>Calculate · Convert · Solve</p>
+      </div>
+    </header>
+
+    <section class="display" aria-live="polite">
+      <div id="expression">Ready to calculate</div>
+      <div id="result">0</div>
+    </section>
+
+    <nav class="modes" aria-label="Calculator modes">
+      <button class="mode active" data-mode="standard">▦ Standard</button>
+      <button class="mode" data-mode="scientific">⚗ Scientific</button>
+      <button class="mode" data-mode="percentage">% Percentage</button>
+      <button class="mode" data-mode="converter">⇄ Converter</button>
+    </nav>
+
+    <section id="scientificKeys" class="scientific-keys hidden">
+      <button data-value="sin(">sin</button>
+      <button data-value="cos(">cos</button>
+      <button data-value="tan(">tan</button>
+      <button data-value="sqrt(">√</button>
+      <button data-value="log(">log</button>
+      <button data-value="ln(">ln</button>
+      <button data-value="^2">x²</button>
+      <button data-value="pi">π</button>
+      <button data-value="e">e</button>
+    </section>
+
+    <section id="keypad" class="keypad">
+      <button class="clear" data-action="clear">C</button>
+      <button data-action="backspace">⌫</button>
+      <button data-value="(">(</button>
+      <button data-value=")">)</button>
+      <button class="operator" data-value="/">÷</button>
+
+      <button data-value="7">7</button>
+      <button data-value="8">8</button>
+      <button data-value="9">9</button>
+      <button class="operator" data-value="*">×</button>
+
+      <button data-value="4">4</button>
+      <button data-value="5">5</button>
+      <button data-value="6">6</button>
+      <button class="operator" data-value="-">−</button>
+
+      <button data-value="1">1</button>
+      <button data-value="2">2</button>
+      <button data-value="3">3</button>
+      <button class="operator" data-value="+">+</button>
+
+      <button data-action="sign">+/−</button>
+      <button data-value="0">0</button>
+      <button data-value=".">.</button>
+      <button class="equals" data-action="calculate">=</button>
+    </section>
+
+    <section id="converterPanel" class="converter hidden">
+      <h2>Length Converter</h2>
+      <label for="lengthValue">Enter value</label>
+      <input id="lengthValue" type="number" placeholder="Enter a number" value="1">
+
+      <label for="fromUnit">From</label>
+      <select id="fromUnit">
+        <option value="m">Meters</option>
+        <option value="km">Kilometers</option>
+        <option value="cm">Centimeters</option>
+        <option value="mi">Miles</option>
+        <option value="ft">Feet</option>
+      </select>
+
+      <label for="toUnit">To</label>
+      <select id="toUnit">
+        <option value="km">Kilometers</option>
+        <option value="m">Meters</option>
+        <option value="cm">Centimeters</option>
+        <option value="mi">Miles</option>
+        <option value="ft">Feet</option>
+      </select>
+
+      <button id="convertButton" class="equals convert-button">
+        Convert
+      </button>
+      <p id="convertResult">Result will appear here</p>
+    </section>
+
+    <footer>Designed with precision ✦ Built for everyday calculations</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
